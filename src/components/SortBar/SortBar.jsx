@@ -6,53 +6,32 @@ function SortBar() {
     cards,
     filteredCards,
     setFilteredCards,
-    sortProperties,
-    setSortProperties,
+    sortOrder,
+    setSortOrder,
   } = React.useContext(dataContext);
-
-  const handleSortingParameter = ({ target: { value } }) => {
-    setSortProperties({
-      ...sortProperties,
-      parameter: value,
-    });
-  };
-
-  const handleSortingOrder = (order) => {
-    setSortProperties({
-      ...sortProperties,
-      order,
-    });
-  };
 
   const sortCards = () => {
     let cardsToSort = [...cards];
     if (filteredCards) cardsToSort = [...filteredCards];
-
     cardsToSort.sort((a, b) => (
-      (sortProperties.order === 'asc')
-        ? a[sortProperties.parameter]
-          .localeCompare(b[sortProperties.parameter])
-        : b[sortProperties.parameter]
-          .localeCompare(a[sortProperties.parameter])
+      (sortOrder === 'asc')
+        ? a.name.localeCompare(b.name)
+        : b.name.localeCompare(a.name)
     ));
     setFilteredCards(cardsToSort);
   };
 
   React.useEffect(() => {
-    if (sortProperties.parameter && sortProperties.order) {
+    if (sortOrder) {
       sortCards();
     }
-  }, [sortProperties]);
+  }, [sortOrder]);
 
   return (
     <>
-      <select onChange={(e) => handleSortingParameter(e)}>
-        <option value="">Select</option>
-        <option value="name">Name</option>
-      </select>
       <button
         type="button"
-        onClick={() => handleSortingOrder('asc')}
+        onClick={() => setSortOrder('asc')}
       >
         <svg
           className="w-6 h-6"
@@ -67,7 +46,7 @@ function SortBar() {
       </button>
       <button
         type="button"
-        onClick={() => handleSortingOrder('desc')}
+        onClick={() => setSortOrder('desc')}
       >
         <svg
           className="w-6 h-6"
