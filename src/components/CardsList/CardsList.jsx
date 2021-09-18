@@ -7,6 +7,7 @@ function CardsList() {
     cards,
     error,
     loading,
+    filteredCards,
   } = React.useContext(dataContext);
 
   if (loading) {
@@ -19,8 +20,10 @@ function CardsList() {
 
   if (cards) {
     return (
-      <div>
-        { cards.map((card) => <Cards card={card} />)}
+      <div className="flex flex-wrap justify-evenly mt-28 mx-4 border">
+        { (!filteredCards)
+          ? cards.map((card) => <Cards card={card} />)
+          : filteredCards.map((card) => <Cards card={card} />)}
       </div>
     );
   }
