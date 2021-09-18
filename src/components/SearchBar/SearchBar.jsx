@@ -32,7 +32,7 @@ function SearchBar() {
         type="text"
         value={filterByName}
         onChange={(e) => setFilterByName(e.target.value)}
-        placeholder="Search by character name"
+        placeholder="Search by pokémon name"
       />
     </>
   );
