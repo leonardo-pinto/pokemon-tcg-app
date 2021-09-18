@@ -9,6 +9,7 @@ function DataProvider({ children }) {
   const { favoriteCards, setFavorite, removeFavorite } = useLocalStorage('favoriteCharacters');
   const [filteredCards, setFilteredCards] = React.useState('');
   const [filterByName, setFilterByName] = React.useState('');
+  const [sortOrder, setSortOrder] = React.useState('');
 
   return (
     <dataContext.Provider
@@ -23,6 +24,8 @@ function DataProvider({ children }) {
         setFilteredCards,
         filterByName,
         setFilterByName,
+        sortOrder,
+        setSortOrder,
       }}
     >
       { children }
