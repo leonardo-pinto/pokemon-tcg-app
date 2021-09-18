@@ -7,7 +7,7 @@ import dataContext from '../../context/dataContext';
 function Cards(props) {
   const { card } = props;
 
-  const { images: { small }, name } = card;
+  const { images: { small }, name, id } = card;
 
   const { favoriteCards, setFavorite, removeFavorite } = React.useContext(dataContext);
 
@@ -36,7 +36,7 @@ function Cards(props) {
   return (
     <div key={name} className="m-4 p-5 border">
       <img src={small} alt={name} />
-      <Link to={`/details/${name}`}>
+      <Link to={`/details/${id}`}>
         <button type="button">
           Details
         </button>
