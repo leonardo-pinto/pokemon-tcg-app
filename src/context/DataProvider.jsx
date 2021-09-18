@@ -7,6 +7,8 @@ import useLocalStorage from '../hooks/useLocalStorage';
 function DataProvider({ children }) {
   const { cards, error, loading } = useAxios();
   const { favoriteCards, setFavorite, removeFavorite } = useLocalStorage('favoriteCharacters');
+  const [filteredCards, setFilteredCards] = React.useState('');
+  const [filterByName, setFilterByName] = React.useState('');
 
   return (
     <dataContext.Provider
@@ -17,6 +19,10 @@ function DataProvider({ children }) {
         favoriteCards,
         setFavorite,
         removeFavorite,
+        filteredCards,
+        setFilteredCards,
+        filterByName,
+        setFilterByName,
       }}
     >
       { children }
