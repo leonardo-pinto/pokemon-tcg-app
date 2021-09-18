@@ -1,10 +1,12 @@
 import React from 'react';
+import CardsList from '../components/CardsList/CardsList';
 
 function Home() {
   return (
-    <div>
-      Home
-    </div>
+    <>
+      <CardsList />
+      ola
+    </>
   );
 }
 
