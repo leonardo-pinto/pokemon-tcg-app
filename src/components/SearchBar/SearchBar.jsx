@@ -22,6 +22,10 @@ function SearchBar() {
     }
   }, [filterByName]);
 
+  // if (cards) {
+  //   const cardTypes = (cards.map((card) => [...new Set(card.types)]));
+  // }
+
   return (
     <>
       <input
