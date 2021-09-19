@@ -9,6 +9,7 @@ import Facts from './pages/Facts';
 
 function App() {
   return (
+
     <DataProvider>
       <Header />
       <Switch>
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" component={Home} />
       </Switch>
     </DataProvider>
+
   );
 }
 

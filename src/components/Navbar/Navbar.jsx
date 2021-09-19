@@ -8,7 +8,7 @@ function Navbar() {
   const handleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   return (
-    <>
+    <div className="absolute left-0">
       <svg
         onClick={handleSidebar}
         data-testid="sidebarIcon"
@@ -37,7 +37,7 @@ function Navbar() {
           <NavbarLinks handleSidebar={handleSidebar} />
         </nav>
       </OutsideClickHandler>
-    </>
+    </div>
   );
 }
 
