@@ -25,8 +25,12 @@ function Cards(props) {
   };
 
   return (
-    <div key={id} className="flex-col p-4 mb-4 justify-center items-center border-4 border-light-blue-500 border-opacity-100 rounded">
-      <img src={small} alt={name} />
+    <div
+      style={{ backgroundImage: "url('https://thumbs.dreamstime.com/z/pokemon-cards-background-pile-image-74262268.jpg')" }}
+      key={id}
+      className="flex-col p-4 m-4 justify-center items-center border-2 border-light-blue-500 border-opacity-100 rounded"
+    >
+      <img className="w-60 h-80" src={small} alt={name} />
       <div className="flex justify-evenly mt-2 sm:justify-between">
         <Link to={{
           pathname: `/details/${id}`,
@@ -35,7 +39,7 @@ function Cards(props) {
         >
           <button
             type="button"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded w-20 sm:w-40"
+            className="bg-purple-800 hover:bg-purple-800 text-white font-bold py-2 px-3 rounded w-20 sm:w-40"
           >
             Details
           </button>
@@ -49,7 +53,7 @@ function Cards(props) {
               ? (
                 <svg
                   onClick={() => favoriteToast(isFavorite)}
-                  className="w-8 h-8"
+                  className="rounded bg-purple-800 text-white py-1 w-12 h-10"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -66,7 +70,7 @@ function Cards(props) {
               : (
                 <svg
                   onClick={favoriteToast}
-                  className="w-8 h-8"
+                  className="text-yellow-300 rounded bg-purple-800 py-1 w-12 h-10"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"

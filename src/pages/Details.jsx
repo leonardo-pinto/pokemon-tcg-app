@@ -21,8 +21,8 @@ Details.propTypes = {
       images: PropTypes.shape({
         small: PropTypes.string.isRequired,
       }).isRequired,
-      evolvesFrom: PropTypes.string.isRequired,
-      evolvesTo: PropTypes.string,
+      evolvesFrom: PropTypes.string,
+      evolvesTo: PropTypes.arrayOf(PropTypes.string),
       artist: PropTypes.string.isRequired,
       rarity: PropTypes.string.isRequired,
       nationalPokedexNumbers: PropTypes.arrayOf(PropTypes.number),

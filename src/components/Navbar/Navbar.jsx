@@ -12,7 +12,7 @@ function Navbar() {
       <svg
         onClick={handleSidebar}
         data-testid="sidebarIcon"
-        className="w-10 h-10 sm:w-12 sm:h-12 cursor-pointer"
+        className="text-white w-10 h-10 ml-3 sm:w-12 sm:h-12 cursor-pointer"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -32,7 +32,7 @@ function Navbar() {
       >
         <nav
           className={sidebarOpen
-            ? 'bg-gray-400 w-auto h-screen flex justify-center fixed top-0 transition duration-350 ease-in-out left-0 z-10' : 'w-250 h-screen flex justify-center fixed top-0 transition duration-800 -left-full'}
+            ? 'bg-purple-800 w-auto h-screen flex justify-center fixed top-0 transition duration-350 ease-in-out left-0 z-10' : 'w-250 h-screen flex justify-center fixed top-0 transition duration-800 -left-full'}
         >
           <NavbarLinks handleSidebar={handleSidebar} />
         </nav>

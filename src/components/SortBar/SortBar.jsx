@@ -28,13 +28,13 @@ function SortBar() {
   }, [sortOrder]);
 
   return (
-    <>
+    <div className="flex">
       <button
         type="button"
         onClick={() => setSortOrder('asc')}
       >
         <svg
-          className="w-6 h-6"
+          className="text-white w-12 h-12 m-4"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ function SortBar() {
         onClick={() => setSortOrder('desc')}
       >
         <svg
-          className="w-6 h-6"
+          className="text-white w-12 h-12 m-4"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ function SortBar() {
           />
         </svg>
       </button>
-    </>
+    </div>
   );
 }
 

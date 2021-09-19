@@ -21,7 +21,8 @@ function FactsList() {
               src={fact.image}
               alt={fact}
             />
-            <p className="pt-4 text-justify text-base sm:text-lg md:text-lg">{fact.text}</p>
+            <p className="text-white pt-4 text-justify text-base sm:text-lg md:text-lg">{fact.text}</p>
+            <cite className="text-white py-4">Reference: https://www.thegamer.com/pokemon-tcg-things-true-fans-know/</cite>
           </div>
         ))}
       </Carousel>

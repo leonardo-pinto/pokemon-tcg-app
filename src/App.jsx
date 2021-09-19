@@ -9,16 +9,17 @@ import Facts from './pages/Facts';
 
 function App() {
   return (
-
-    <DataProvider>
-      <Header />
-      <Switch>
-        <Route path="/details/:id" component={Details} />
-        <Route path="/favorites" component={Favorites} />
-        <Route path="/facts" component={Facts} />
-        <Route exact path="/" component={Home} />
-      </Switch>
-    </DataProvider>
+    <div className="bg-black">
+      <DataProvider>
+        <Header />
+        <Switch>
+          <Route path="/details/:id" component={Details} />
+          <Route path="/favorites" component={Favorites} />
+          <Route path="/facts" component={Facts} />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </DataProvider>
+    </div>
 
   );
 }
