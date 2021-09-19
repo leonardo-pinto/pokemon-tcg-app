@@ -10,7 +10,11 @@ function FavoritesCardsList() {
       { favoriteCards
         && (
           <div className="flex flex-wrap justify-evenly mt-28 mx-4 border">
-            { favoriteCards.map((favoriteCard) => <Cards card={favoriteCard} />) }
+            { favoriteCards.map((favoriteCard) => (
+              <div key={favoriteCard.id}>
+                <Cards card={favoriteCard} />
+              </div>
+            )) }
           </div>
         )}
     </>
