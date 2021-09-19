@@ -1,9 +1,10 @@
 import React from 'react';
+import FactsList from '../components/FactsList/FactsList';
 
 function Facts() {
   return (
     <div>
-      Facts
+      <FactsList />
     </div>
   );
 }
