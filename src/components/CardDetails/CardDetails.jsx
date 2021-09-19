@@ -9,6 +9,10 @@ function CardDetails() {
   const [cardDetails, setCardDetails] = React.useState('');
   const { favoriteCards, setFavorite, removeFavorite } = React.useContext(dataContext);
 
+  const [isFavorite, setIsFavorite] = React.useState(
+    favoriteCards.some((favorite) => favorite.id === cardDetails.id),
+  );
+
   React.useEffect(() => {
     cards.find((card) => (
       (card.id === location)
@@ -16,10 +20,6 @@ function CardDetails() {
         : null
     ));
   }, []);
-
-  const [isFavorite, setIsFavorite] = React.useState(
-    favoriteCards.some((favorite) => favorite.id === cardDetails.id),
-  );
 
   React.useEffect(() => {
     setIsFavorite(favoriteCards.some((favorite) => favorite.id === cardDetails.id));
