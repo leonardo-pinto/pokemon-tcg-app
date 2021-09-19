@@ -27,7 +27,11 @@ function Cards(props) {
   return (
     <div key={id} className="flex flex-wrap justify-evenly mt-28 mx-4 border">
       <img src={small} alt={name} />
-      <Link to={`/details/${id}`}>
+      <Link to={{
+        pathname: `/details/${id}`,
+        state: card,
+      }}
+      >
         <button type="button">
           Details
         </button>
