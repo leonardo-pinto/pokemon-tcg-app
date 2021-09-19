@@ -20,11 +20,19 @@ function CardsList() {
 
   if (cards) {
     return (
-      <div className="flex flex-wrap justify-evenly mt-28 mx-4 border">
+      <>
         { (!filteredCards)
-          ? cards.map((card) => <Cards card={card} />)
-          : filteredCards.map((card) => <Cards card={card} />)}
-      </div>
+          ? cards.map((card) => (
+            <div key={card.id}>
+              <Cards card={card} />
+            </div>
+          ))
+          : filteredCards.map((card) => (
+            <div key={card.id}>
+              <Cards card={card} />
+            </div>
+          ))}
+      </>
     );
   }
 }

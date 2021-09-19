@@ -54,7 +54,7 @@ function SearchBar() {
       <select onChange={(e) => setFilterByType(e.target.value)}>
         <option value="all">All types</option>
         { cardTypes.map((cardType) => (
-          <option value={cardType}>{cardType}</option>
+          <option key={cardType} value={cardType}>{cardType}</option>
         ))}
       </select>
     </>
