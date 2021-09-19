@@ -32,7 +32,7 @@ function Navbar() {
       >
         <nav
           className={sidebarOpen
-            ? 'bg-gray-400 w-auto h-screen flex justify-center fixed top-0 transition duration-350 ease-in-out left-0' : 'w-250 h-screen flex justify-center fixed top-0 transition duration-800 -left-full'}
+            ? 'bg-gray-400 w-auto h-screen flex justify-center fixed top-0 transition duration-350 ease-in-out left-0 z-10' : 'w-250 h-screen flex justify-center fixed top-0 transition duration-800 -left-full'}
         >
           <NavbarLinks handleSidebar={handleSidebar} />
         </nav>
