@@ -31,7 +31,7 @@ function Cards(props) {
       className="flex-col p-4 m-4 justify-center items-center border-2 border-light-blue-500 border-opacity-100 rounded"
     >
       <img className="w-60 h-80" src={small} alt={name} />
-      <div className="flex justify-evenly mt-2 sm:justify-between">
+      <div className="flex justify-evenly mt-4 sm:justify-between">
         <Link to={{
           pathname: `/details/${id}`,
           state: card,
