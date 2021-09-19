@@ -35,7 +35,7 @@ function Cards(props) {
   };
 
   return (
-    <div key={name} className="m-4 p-5 border">
+    <div key={id} className="flex flex-wrap justify-evenly mt-28 mx-4 border">
       <img src={small} alt={name} />
       <Link to={`/details/${id}`}>
         <button type="button">
@@ -91,7 +91,9 @@ export default Cards;
 
 Cards.propTypes = {
   card: PropTypes.shape({
-    images: PropTypes.string.isRequired,
+    images: PropTypes.shape({
+      small: PropTypes.string.isRequired,
+    }),
     name: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
   }).isRequired,

@@ -55,20 +55,22 @@ function CardDetails() {
       <div>
         <img className="w-60 h-60" src={small} alt={name} />
         <h1>{name}</h1>
-        <p>{`Pokédex number: ${nationalPokedexNumbers}`}</p>
-        <p>{`Artist: ${artist}`}</p>
-        <p>{`Rarity: ${rarity}`}</p>
-        {
-          (evolvesFrom)
-            ? <p>{`Evolves from: ${evolvesFrom}`}</p>
-            : null
-        }
-        {
-          (evolvesTo)
-            ? <p>{`Evolves to: ${evolvesTo}`}</p>
-            : null
-        }
-        <p>{`Card average sell price (${updatedAt}): ${averageSellPrice}\u20AC`}</p>
+        <ul>
+          <li>{`Pokédex number: ${nationalPokedexNumbers}`}</li>
+          <li>{`Artist: ${artist}`}</li>
+          <li>{`Rarity: ${rarity}`}</li>
+          {
+            (evolvesFrom)
+              ? <li>{`Evolves from: ${evolvesFrom}`}</li>
+              : null
+          }
+          {
+            (evolvesTo)
+              ? <li>{`Evolves to: ${evolvesTo}`}</li>
+              : null
+          }
+          <li>{`Card average sell price (${updatedAt}): ${averageSellPrice}\u20AC`}</li>
+        </ul>
         { !isFavorite
           ? (
             <button
