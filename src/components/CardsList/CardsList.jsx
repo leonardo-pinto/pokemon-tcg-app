@@ -20,7 +20,7 @@ function CardsList() {
 
   if (cards) {
     return (
-      <>
+      <div className="flex flex-wrap justify-evenly">
         { (!filteredCards)
           ? cards.map((card) => (
             <div key={card.id}>
@@ -32,7 +32,7 @@ function CardsList() {
               <Cards card={card} />
             </div>
           ))}
-      </>
+      </div>
     );
   }
 }
