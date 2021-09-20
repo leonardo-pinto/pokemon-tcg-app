@@ -39,7 +39,25 @@ function CardsList() {
   }
 
   if (error !== '') {
-    return <p>Something wrong happenned</p>;
+    return (
+      <div className="m-auto bg-purple-800 flex flex-wrap rounded-lg w-1/2 justify-center items-center">
+        <svg
+          className="-ml-1 mr-3 h-20 w-20 p-2 sm:h-28 sm:w-28 md:h-32 md:w-32 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <p className="text-center text-white sm:text-4xl md:text-4xl text-2xl p-4">Something wrong happenned. Please try again.</p>
+      </div>
+    );
   }
 
   if (cards) {
