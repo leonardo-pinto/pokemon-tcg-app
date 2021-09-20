@@ -32,6 +32,10 @@ function SearchBar() {
       ));
       setFilteredCards(filterByNameAndType);
     }
+
+    if (!filterByName && filterByType === 'all') {
+      setFilteredCards(cards);
+    }
   };
 
   React.useEffect(() => {
