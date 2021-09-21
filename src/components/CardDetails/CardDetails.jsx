@@ -16,25 +16,27 @@ function CardDetails(state) {
   } = state;
 
   return (
-    <div>
-      <img className="w-60 h-60" src={images.small} alt={name} />
-      <h1>{name}</h1>
-      <ul>
-        <li>{`Pokédex number: ${nationalPokedexNumbers}`}</li>
-        <li>{`Artist: ${artist}`}</li>
-        <li>{`Rarity: ${rarity}`}</li>
-        {
-            (evolvesFrom)
-              ? <li>{`Evolves from: ${evolvesFrom}`}</li>
-              : null
-          }
-        {
-            (evolvesTo)
-              ? <li>{`Evolves to: ${evolvesTo}`}</li>
-              : null
-          }
-        <li>{`Card average sell price (${updatedAt}): ${averageSellPrice}\u20AC`}</li>
-      </ul>
+    <div className="m-4 p-4 flex flex-col md:flex-row sm:flex-row justify-center items-center">
+      <img className="w-1/2 h-1/2 sm:w-1/3 sm:h-1/4 md:w-1/3 md:h-1/4" src={images.large} alt={name} />
+      <div className="text-center m-10 p-4 flex-col justify-center items-center">
+        <h1 className="text-white text-3xl leading-loose">{name}</h1>
+        <ul className="text-white text-2xl leading-loose">
+          <li>{`Pokédex number: ${nationalPokedexNumbers}`}</li>
+          <li>{`Artist: ${artist}`}</li>
+          <li>{`Rarity: ${rarity}`}</li>
+          {
+              (evolvesFrom)
+                ? <li>{`Evolves from: ${evolvesFrom}`}</li>
+                : null
+            }
+          {
+              (evolvesTo)
+                ? <li>{`Evolves to: ${evolvesTo}`}</li>
+                : null
+            }
+          <li>{`Card average sell price (${updatedAt}): ${averageSellPrice}\u20AC`}</li>
+        </ul>
+      </div>
     </div>
   );
 }
@@ -47,8 +49,8 @@ CardDetails.propTypes = {
     images: PropTypes.shape({
       small: PropTypes.string.isRequired,
     }).isRequired,
-    evolvesFrom: PropTypes.string.isRequired,
-    evolvesTo: PropTypes.string,
+    evolvesFrom: PropTypes.string,
+    evolvesTo: PropTypes.arrayOf(PropTypes.string),
     artist: PropTypes.string.isRequired,
     rarity: PropTypes.string.isRequired,
     nationalPokedexNumbers: PropTypes.arrayOf(PropTypes.number),
