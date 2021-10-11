@@ -15,9 +15,9 @@ function FactsList() {
     <div>
       <Carousel responsive={responsive}>
         { facts.map((fact) => (
-          <div key={fact} className="flex flex-col items-center justify-center mx-16 p-10">
+          <div key={fact} className="flex flex-col items-center justify-center mx-2 sm:mx-16 p-10">
             <img
-              className="w-120 h-80"
+              className="w-3/4 h-3/4"
               src={fact.image}
               alt={fact}
             />
