@@ -4,21 +4,19 @@
 
 
 <p> The project consists of using the <a href="https://pokemontcg.io//">Pokémon TCG Developers API</a> to practice front-end skills.</p>
-<p> The application was developed using React, Context API, React Hooks and Tailwind CSS. </p>
+<p> The application was developed using React, Context API, React Hooks.</p>
+<p> Responsive layout and styles were applied using Tailwind CSS. </p>
 
 ![Pokémon TCG App example](src/images/example.png?raw=true)
 
 ## Applicaction Deploy with Vercel
 
-* <a href="https://todo-react-redux-murex.vercel.app/">To-Do List</a>
-
-
-### Features
+## Features
 
 * Displays several Pokémon Cards;
 * Detailed information about a specific card;
 * Favorite cards;
-* Filter cards by Pokémon name, type;
+* Filter cards by Pokémon name and type;
 * Sort Pokémon cards by name;
 * Pokémon facts;
 
@@ -44,10 +42,10 @@
 
 1. Clone the repository
 
-- `git clone git@github.com:leonardo-pinto/todo-react-redux.git`.
+- `git clone git@github.com:leonardo-pinto/pokemon-tcg-app.git`.
 
 Enter in the created directory:
-  - `cd todo-react-redux`
+  - `cd pokemon-tcg-app`
 
 2. Install the required dependencies
 
